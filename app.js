@@ -6,7 +6,7 @@ function getData() {
     payments_receive.order("desc")
     .call()
     .then(function (data) {
-        data.records.map(function(item) {
+        data.records.forEach(function(item) {
             if(item.type === 'payment') {
                 var li = document.createElement("li");
                 li.innerHTML = `from: ${item.from} amount: ${item.amount}`
