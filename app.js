@@ -25,7 +25,7 @@ payments
             if (payment.to !== accountId) {
             return;
             } else {
-                alert("New Transaction.");
+                alert(`Deposit ${payment.amount} XLM`);
                 getData();
             }
         },
