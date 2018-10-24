@@ -3,7 +3,9 @@ var payments_receive = server.payments().forAccount(accountId);
 
 function getData() {
     document.querySelector("#list").innerHTML = ""
-    payments_receive.order("desc")
+    payments_receive
+    .order("desc")
+    .limit(10)
     .call()
     .then(function (data) {
         data.records.forEach(function(item) {
